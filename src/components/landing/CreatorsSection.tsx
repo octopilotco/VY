@@ -26,13 +26,13 @@ const categories = [
 
 const CreatorsSection = () => {
   return (
-    <section id="creators" className="border-b border-border py-24">
+    <section id="creators" className="border-b border-border section-padding">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
-          <h2 className="text-4xl font-bold text-foreground lg:text-5xl">
+        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
+          <h2 className="text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
             For Serious Creators
           </h2>
-          <Button className="rounded-full bg-foreground px-8 py-6 text-base font-semibold text-background hover:bg-foreground/90">
+          <Button className="rounded-full bg-foreground px-8 py-6 text-base font-semibold text-background transition-all duration-200 hover:bg-foreground/90 hover:shadow-xl hover:shadow-foreground/5">
             Try Vyxlo Now
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -40,9 +40,9 @@ const CreatorsSection = () => {
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((cat) => (
-            <div key={cat.title} className="glass-card rounded-2xl p-6 transition-colors hover:border-muted-foreground/30">
+            <div key={cat.title} className="glass-card group rounded-2xl p-6 transition-all duration-250">
               <h3 className="text-lg font-semibold text-foreground">{cat.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{cat.description}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{cat.description}</p>
             </div>
           ))}
         </div>

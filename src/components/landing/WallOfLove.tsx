@@ -32,21 +32,19 @@ const TestimonialCard = ({ name, text }: { name: string; text: string }) => (
 
 const WallOfLove = () => {
   return (
-    <section id="testimonials" className="border-b border-border py-24">
+    <section id="testimonials" className="border-b border-border section-padding">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-center text-4xl font-bold text-foreground lg:text-5xl">
+        <h2 className="text-center text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
           Trusted by <span className="text-gradient">Creators</span>
         </h2>
       </div>
 
-      <div className="mt-12 space-y-6 overflow-hidden">
-        {/* Row 1 */}
+      <div className="mt-14 space-y-6 overflow-hidden">
         <div className="animate-scroll-left flex gap-6">
           {[...row1, ...row1].map((t, i) => (
             <TestimonialCard key={`r1-${i}`} {...t} />
           ))}
         </div>
-        {/* Row 2 - reverse direction via CSS */}
         <div className="animate-scroll-left-slow flex gap-6" style={{ animationDirection: "reverse" }}>
           {[...row2, ...row2].map((t, i) => (
             <TestimonialCard key={`r2-${i}`} {...t} />

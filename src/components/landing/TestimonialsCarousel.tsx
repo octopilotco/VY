@@ -23,8 +23,8 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/40?img=12",
   },
   {
-    stars: 2,
-    text: "After discovering Vyxlo, I found myself struggling to generate ideas. Now, I'm posting consistently, and the AI suggestions match my voice perfectly.",
+    stars: 5,
+    text: "After discovering Vyxlo, I found myself posting consistently. The AI suggestions match my voice perfectly and engagement doubled.",
     name: "Abdullah Elsayed",
     date: "Jul 17, 2025",
     avatar: "https://i.pravatar.cc/40?img=13",
@@ -49,8 +49,8 @@ const TestimonialsCarousel = () => {
   const doubled = [...testimonials, ...testimonials];
 
   return (
-    <section className="overflow-hidden border-b border-border py-12">
-      <div className="animate-scroll-left flex gap-6">
+    <section className="overflow-hidden border-b border-border py-16">
+      <div className="animate-scroll-left flex gap-6 px-6">
         {doubled.map((t, i) => (
           <div
             key={i}

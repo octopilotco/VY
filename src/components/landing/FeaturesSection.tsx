@@ -68,37 +68,37 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="border-b border-border py-24">
+    <section id="features" className="border-b border-border section-padding">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-center text-4xl font-bold text-foreground lg:text-5xl">
+        <h2 className="text-center text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
           Vyxlo Just <span className="text-gradient">Leveled Up</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-center text-lg text-muted-foreground">
+        <p className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-muted-foreground">
           Every feature you need to dominate 𝕏, all in one powerful platform.
         </p>
 
-        <div className="mt-16 space-y-20">
+        <div className="mt-20 space-y-24">
           {features.map((feature, index) => (
             <div
               key={feature.category}
-              className={`flex flex-col gap-12 lg:flex-row lg:items-center ${
+              className={`flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16 ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Mockup */}
               <div className="flex-1">
-                <div className="glass-card flex aspect-video items-center justify-center rounded-2xl">
-                  <feature.icon className="h-16 w-16 text-muted-foreground/30" />
+                <div className="glass-card flex aspect-video items-center justify-center rounded-2xl shadow-lg shadow-black/10">
+                  <feature.icon className="h-16 w-16 text-muted-foreground/20" />
                 </div>
               </div>
 
               {/* Text */}
               <div className="flex-1">
-                <span className="text-xs font-bold uppercase tracking-widest text-primary">
+                <span className="text-xs font-bold uppercase tracking-[0.15em] text-primary">
                   {feature.category}
                 </span>
-                <h3 className="mt-3 text-3xl font-bold text-foreground">{feature.title}</h3>
-                <p className="mt-4 text-muted-foreground">{feature.description}</p>
+                <h3 className="mt-3 text-3xl font-bold tracking-tight text-foreground">{feature.title}</h3>
+                <p className="mt-4 leading-relaxed text-muted-foreground">{feature.description}</p>
                 <ul className="mt-6 space-y-3">
                   {feature.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-center gap-3 text-sm text-muted-foreground">
